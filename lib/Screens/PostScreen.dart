@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:finalproject/Widgets/MyListView.dart';
 
 class PostScreen extends StatefulWidget {
-  const PostScreen({Key? key}) : super(key: key);
   static const String id = 'PostScreen';
 
   @override

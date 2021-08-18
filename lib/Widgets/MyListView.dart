@@ -3,9 +3,8 @@ import 'package:finalproject/Models/Post.dart';
 
 class MyListView extends StatelessWidget {
   const MyListView({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
+    @required this.title,
+  });
 
   final List<Post> title;
 

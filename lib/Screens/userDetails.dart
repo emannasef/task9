@@ -3,6 +3,8 @@ import 'package:finalproject/Widgets/MyCard.dart';
 import 'package:finalproject/utils.dart';
 import 'package:flutter/material.dart';
 
+import 'MapScreen.dart';
+
 class UserDetails extends StatefulWidget {
   final User user;
   UserDetails(this.user);
@@ -23,8 +25,7 @@ class _UserDetailsState extends State<UserDetails> {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 MyCard(
                   title: widget.user.username,
@@ -65,6 +66,22 @@ class _UserDetailsState extends State<UserDetails> {
                     style: TextStyle(fontSize: 20.0),
                   ),
                 ),
+                SizedBox(
+                  height: 30.0,
+                ),
+                Container(
+                  width: 150.0,
+                  color: Colors.amberAccent,
+                  child: MaterialButton(
+                      child: Text('Location'),
+                      onPressed: () {
+                        pushToScreen(
+                            context,
+                            MapSample(
+                              locationOfUser: widget.user.address.geo,
+                            ));
+                      }),
+                )
               ],
             ),
           ),

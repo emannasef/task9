@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
-  final String? title;
+  final String title;
   MyCard({this.title});
 
   @override
